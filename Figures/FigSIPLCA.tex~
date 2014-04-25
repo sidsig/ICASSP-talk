@@ -1,0 +1,63 @@
+% Generated using matlabfrag
+% Version: v0.6.16
+% Version Date: 04-Apr-2010
+% Author: Zebb Prime
+%
+%% <text>
+%
+\providecommand\matlabtextA{\color[rgb]{0.000,0.000,0.000}\fontsize{10}{10}\selectfont\strut}%
+\psfrag{036}[tc][tc]{\matlabtextA t}%
+\psfrag{037}[bc][bc]{\matlabtextA omega}%
+\psfrag{038}[bc][bc]{\matlabtextA f}%
+\psfrag{039}[tc][tc]{\matlabtextA t}%
+\psfrag{040}[tc][tc]{\matlabtextA omega}%
+%
+%% </text>
+%
+%% <xtick>
+%
+\def\matlabfragNegXTick{\mathord{\makebox[0pt][r]{$-$}}}
+%
+\psfrag{000}[ct][ct]{\matlabtextA $100$}%
+\psfrag{001}[ct][ct]{\matlabtextA $200$}%
+\psfrag{002}[ct][ct]{\matlabtextA $300$}%
+\psfrag{003}[ct][ct]{\matlabtextA $400$}%
+\psfrag{004}[ct][ct]{\matlabtextA $500$}%
+\psfrag{015}[ct][ct]{\matlabtextA $100$}%
+\psfrag{016}[ct][ct]{\matlabtextA $200$}%
+\psfrag{017}[ct][ct]{\matlabtextA $300$}%
+\psfrag{018}[ct][ct]{\matlabtextA $400$}%
+\psfrag{019}[ct][ct]{\matlabtextA $500$}%
+\psfrag{025}[ct][ct]{\matlabtextA $0$}%
+\psfrag{026}[ct][ct]{\matlabtextA $200$}%
+\psfrag{027}[ct][ct]{\matlabtextA $400$}%
+\psfrag{028}[ct][ct]{\matlabtextA $600$}%
+\psfrag{029}[ct][ct]{\matlabtextA $800$}%
+\psfrag{030}[ct][ct]{\matlabtextA $1000$}%
+\psfrag{031}[ct][ct]{\matlabtextA $1200$}%
+%
+%% </xtick>
+%
+%% <ytick>
+%
+\psfrag{005}[rc][rc]{\matlabtextA $100$}%
+\psfrag{006}[rc][rc]{\matlabtextA $200$}%
+\psfrag{007}[rc][rc]{\matlabtextA $300$}%
+\psfrag{008}[rc][rc]{\matlabtextA $400$}%
+\psfrag{009}[rc][rc]{\matlabtextA $500$}%
+\psfrag{010}[rc][rc]{\matlabtextA $600$}%
+\psfrag{011}[rc][rc]{\matlabtextA $700$}%
+\psfrag{012}[rc][rc]{\matlabtextA $800$}%
+\psfrag{013}[rc][rc]{\matlabtextA $900$}%
+\psfrag{014}[rc][rc]{\matlabtextA $1000$}%
+\psfrag{020}[rc][rc]{\matlabtextA $10$}%
+\psfrag{021}[rc][rc]{\matlabtextA $20$}%
+\psfrag{022}[rc][rc]{\matlabtextA $30$}%
+\psfrag{023}[rc][rc]{\matlabtextA $40$}%
+\psfrag{024}[rc][rc]{\matlabtextA $50$}%
+\psfrag{032}[rc][rc]{\matlabtextA $0$}%
+\psfrag{033}[rc][rc]{\matlabtextA $0.02$}%
+\psfrag{034}[rc][rc]{\matlabtextA $0.04$}%
+\psfrag{035}[rc][rc]{\matlabtextA $0.06$}%
+%
+%% </ytick>

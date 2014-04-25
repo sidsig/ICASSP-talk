@@ -1,0 +1,44 @@
+% Generated using matlabfrag
+% Version: v0.6.16
+% Version Date: 04-Apr-2010
+% Author: Zebb Prime
+%
+%% <text>
+%
+\providecommand\matlabtextA{\color[rgb]{0.000,0.000,0.000}\fontsize{10}{10}\selectfont\strut}%
+\psfrag{020}[bc][bc]{\matlabtextA omega}%
+\psfrag{021}[tc][tc]{\matlabtextA t}%
+%
+%% </text>
+%
+%% <xtick>
+%
+\def\matlabfragNegXTick{\mathord{\makebox[0pt][r]{$-$}}}
+%
+\psfrag{000}[ct][ct]{\matlabtextA $50$}%
+\psfrag{001}[ct][ct]{\matlabtextA $100$}%
+\psfrag{002}[ct][ct]{\matlabtextA $150$}%
+\psfrag{003}[ct][ct]{\matlabtextA $200$}%
+\psfrag{004}[ct][ct]{\matlabtextA $250$}%
+\psfrag{005}[ct][ct]{\matlabtextA $300$}%
+\psfrag{006}[ct][ct]{\matlabtextA $350$}%
+\psfrag{007}[ct][ct]{\matlabtextA $400$}%
+\psfrag{008}[ct][ct]{\matlabtextA $450$}%
+\psfrag{009}[ct][ct]{\matlabtextA $500$}%
+%
+%% </xtick>
+%
+%% <ytick>
+%
+\psfrag{010}[rc][rc]{\matlabtextA $100$}%
+\psfrag{011}[rc][rc]{\matlabtextA $200$}%
+\psfrag{012}[rc][rc]{\matlabtextA $300$}%
+\psfrag{013}[rc][rc]{\matlabtextA $400$}%
+\psfrag{014}[rc][rc]{\matlabtextA $500$}%
+\psfrag{015}[rc][rc]{\matlabtextA $600$}%
+\psfrag{016}[rc][rc]{\matlabtextA $700$}%
+\psfrag{017}[rc][rc]{\matlabtextA $800$}%
+\psfrag{018}[rc][rc]{\matlabtextA $900$}%
+\psfrag{019}[rc][rc]{\matlabtextA $1000$}%
+%
+%% </ytick>

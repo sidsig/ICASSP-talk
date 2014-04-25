@@ -1,0 +1,98 @@
+% Generated using matlabfrag
+% Version: v0.6.16
+% Version Date: 04-Apr-2010
+% Author: Zebb Prime
+%
+%% <text>
+%
+\providecommand\matlabtextA{\color[rgb]{0.000,0.000,0.000}\fontsize{10}{10}\selectfont\strut}%
+\psfrag{059}[tc][tc]{\matlabtextA $q$}%
+\psfrag{060}[bc][bc]{\matlabtextA (f)}%
+\psfrag{061}[tc][tc]{\matlabtextA $q_{t+1}$}%
+\psfrag{062}[bc][bc]{\matlabtextA $q_{t}$}%
+\psfrag{063}[bc][bc]{\matlabtextA (e)}%
+\psfrag{064}[bc][bc]{\matlabtextA (d)}%
+\psfrag{065}[bc][bc]{\matlabtextA $q$}%
+\psfrag{066}[tc][tc]{\matlabtextA $t$}%
+\psfrag{067}[bc][bc]{\matlabtextA (c)}%
+\psfrag{068}[bc][bc]{\matlabtextA $q$}%
+\psfrag{069}[tc][tc]{\matlabtextA $\omega$}%
+\psfrag{070}[bc][bc]{\matlabtextA (b)}%
+\psfrag{071}[bc][bc]{\matlabtextA $\omega$}%
+\psfrag{072}[tc][tc]{\matlabtextA $t$}%
+\psfrag{073}[bc][bc]{\matlabtextA (a)}%
+\psfrag{074}[bc][bc]{\matlabtextA $\omega$}%
+\psfrag{075}[tc][tc]{\matlabtextA $t$}%
+%
+%% </text>
+%
+%% <xtick>
+%
+\def\matlabfragNegXTick{\mathord{\makebox[0pt][r]{$-$}}}
+%
+\psfrag{000}[ct][ct]{\matlabtextA $1$}%
+\psfrag{001}[ct][ct]{\matlabtextA $2$}%
+\psfrag{002}[ct][ct]{\matlabtextA $3$}%
+\psfrag{003}[ct][ct]{\matlabtextA $4$}%
+\psfrag{010}[ct][ct]{\matlabtextA $1$}%
+\psfrag{011}[ct][ct]{\matlabtextA $2$}%
+\psfrag{012}[ct][ct]{\matlabtextA $3$}%
+\psfrag{013}[ct][ct]{\matlabtextA $4$}%
+\psfrag{018}[ct][ct]{\matlabtextA $10$}%
+\psfrag{019}[ct][ct]{\matlabtextA $20$}%
+\psfrag{020}[ct][ct]{\matlabtextA $30$}%
+\psfrag{021}[ct][ct]{\matlabtextA $40$}%
+\psfrag{022}[ct][ct]{\matlabtextA $50$}%
+\psfrag{023}[ct][ct]{\matlabtextA $60$}%
+\psfrag{028}[ct][ct]{\matlabtextA $200$}%
+\psfrag{029}[ct][ct]{\matlabtextA $400$}%
+\psfrag{030}[ct][ct]{\matlabtextA $600$}%
+\psfrag{031}[ct][ct]{\matlabtextA $800$}%
+\psfrag{032}[ct][ct]{\matlabtextA $1000$}%
+\psfrag{037}[ct][ct]{\matlabtextA $10$}%
+\psfrag{038}[ct][ct]{\matlabtextA $20$}%
+\psfrag{039}[ct][ct]{\matlabtextA $30$}%
+\psfrag{040}[ct][ct]{\matlabtextA $40$}%
+\psfrag{041}[ct][ct]{\matlabtextA $50$}%
+\psfrag{042}[ct][ct]{\matlabtextA $60$}%
+\psfrag{048}[ct][ct]{\matlabtextA $10$}%
+\psfrag{049}[ct][ct]{\matlabtextA $20$}%
+\psfrag{050}[ct][ct]{\matlabtextA $30$}%
+\psfrag{051}[ct][ct]{\matlabtextA $40$}%
+\psfrag{052}[ct][ct]{\matlabtextA $50$}%
+\psfrag{053}[ct][ct]{\matlabtextA $60$}%
+%
+%% </xtick>
+%
+%% <ytick>
+%
+\psfrag{004}[rc][rc]{\matlabtextA $0$}%
+\psfrag{005}[rc][rc]{\matlabtextA $0.2$}%
+\psfrag{006}[rc][rc]{\matlabtextA $0.4$}%
+\psfrag{007}[rc][rc]{\matlabtextA $0.6$}%
+\psfrag{008}[rc][rc]{\matlabtextA $0.8$}%
+\psfrag{009}[rc][rc]{\matlabtextA $1$}%
+\psfrag{014}[rc][rc]{\matlabtextA $1$}%
+\psfrag{015}[rc][rc]{\matlabtextA $2$}%
+\psfrag{016}[rc][rc]{\matlabtextA $3$}%
+\psfrag{017}[rc][rc]{\matlabtextA $4$}%
+\psfrag{024}[rc][rc]{\matlabtextA $4$}%
+\psfrag{025}[rc][rc]{\matlabtextA $3$}%
+\psfrag{026}[rc][rc]{\matlabtextA $2$}%
+\psfrag{027}[rc][rc]{\matlabtextA $1$}%
+\psfrag{033}[rc][rc]{\matlabtextA $1$}%
+\psfrag{034}[rc][rc]{\matlabtextA $2$}%
+\psfrag{035}[rc][rc]{\matlabtextA $3$}%
+\psfrag{036}[rc][rc]{\matlabtextA $4$}%
+\psfrag{043}[rc][rc]{\matlabtextA $200$}%
+\psfrag{044}[rc][rc]{\matlabtextA $400$}%
+\psfrag{045}[rc][rc]{\matlabtextA $600$}%
+\psfrag{046}[rc][rc]{\matlabtextA $800$}%
+\psfrag{047}[rc][rc]{\matlabtextA $1000$}%
+\psfrag{054}[rc][rc]{\matlabtextA $200$}%
+\psfrag{055}[rc][rc]{\matlabtextA $400$}%
+\psfrag{056}[rc][rc]{\matlabtextA $600$}%
+\psfrag{057}[rc][rc]{\matlabtextA $800$}%
+\psfrag{058}[rc][rc]{\matlabtextA $1000$}%
+%
+%% </ytick>

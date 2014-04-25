@@ -1,0 +1,43 @@
+% Generated with LaTeXDraw 2.0.8
+% Fri Mar 11 13:59:03 GMT 2011
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0.7,-2.51)(16.589375,3.0)
+\psframe[linewidth=0.04,dimen=outer](10.477188,0.49)(7.5571876,-1.75)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.4371875,2.13)(1.8571875,2.13)
+\psframe[linewidth=0.04,dimen=outer](4.8971877,2.97)(1.8371875,1.33)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.8971877,2.17)(6.3171873,2.17)
+\psframe[linewidth=0.04,dimen=outer](9.337188,2.99)(6.2771873,1.35)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(9.357187,2.19)(10.777187,2.19)
+\psframe[linewidth=0.04,dimen=outer](14.097187,3.01)(10.737187,1.37)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.2860937,2.18){CQT}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.809219,2.48){TRANSCRIPTION}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.7903123,1.88){MODEL}
+\usefont{T1}{ptm}{m}{n}
+\rput(12.380313,2.48){HMM}
+\usefont{T1}{ptm}{m}{n}
+\rput(12.401719,1.88){POSTPROCESSING}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(14.097187,2.15)(15.517187,2.15)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.55890626,2.46){AUDIO}
+\usefont{T1}{ptm}{m}{n}
+\rput(15.270312,2.48){PIANO-ROLL}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.8771877,0.61)(7.8771877,1.39)
+\psframe[linewidth=0.04,dimen=outer](11.277187,0.63)(5.2171874,-3.01)
+\rput(9.017187,-0.64){\includegraphics{violin2.eps}}
+\rput(8.137188,-0.88){\includegraphics{cello2.eps}}
+\psframe[linewidth=0.04,dimen=outer](8.897188,-0.06)(5.9371877,-2.35)
+\psframe[linewidth=0.04,dimen=outer](9.577188,0.22)(6.6971874,-1.97)
+\rput(7.5171877,-1.06){\includegraphics[width=0.155\textwidth]{piano.eps}}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.174687,-2.66){PITCH TEMPLATES}
+\end{pspicture} 
+}
+

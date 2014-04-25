@@ -1,0 +1,73 @@
+% Generated with LaTeXDraw 2.0.8
+% Fri Jun 10 14:15:55 BST 2011
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-4.02)(19.4,4.06)
+\definecolor{color121b}{rgb}{0.7647058823529411,0.7647058823529411,0.7647058823529411}
+\pscircle[linewidth=0.04,dimen=outer](8.97,3.45){0.61}
+\pscircle[linewidth=0.04,dimen=outer](13.15,3.45){0.61}
+\pscircle[linewidth=0.04,dimen=outer](17.31,3.43){0.61}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.12,3.44)(8.34,3.44)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(9.56,3.46)(12.58,3.46)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(13.74,3.46)(16.74,3.46)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(17.9,3.46)(19.36,3.46)
+\pscircle[linewidth=0.04,dimen=outer](8.95,1.35){0.61}
+\pscircle[linewidth=0.04,dimen=outer](13.13,1.35){0.61}
+\pscircle[linewidth=0.04,dimen=outer](17.29,1.33){0.61}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.1,1.34)(8.32,1.34)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(9.54,1.36)(12.56,1.36)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(13.72,1.36)(16.72,1.36)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(17.88,1.36)(19.38,1.36)
+\pscircle[linewidth=0.04,dimen=outer](8.95,-1.67){0.61}
+\pscircle[linewidth=0.04,dimen=outer](13.13,-1.67){0.61}
+\pscircle[linewidth=0.04,dimen=outer](17.29,-1.69){0.61}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.1,-1.68)(8.32,-1.68)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(9.54,-1.66)(12.56,-1.66)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(13.72,-1.66)(16.72,-1.66)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(17.88,-1.66)(19.32,-1.66)
+\pscircle[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=color121b](8.95,-3.39){0.61}
+\pscircle[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=color121b](13.13,-3.39){0.61}
+\pscircle[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=color121b](17.29,-3.41){0.61}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.92,-2.28)(8.92,-2.82)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(13.12,-2.28)(13.12,-2.82)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(17.3,-2.3)(17.3,-2.84)
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(6.29,-1.03){4.03}{324.0395}{36.047527}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(10.47,-1.03){4.03}{324.0395}{36.047527}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(14.63,-1.01){4.03}{324.0395}{36.047527}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(5.42,0.0){5.42}{319.844}{39.505234}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(9.58,0.0){5.42}{319.844}{39.505234}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(13.74,0.0){5.42}{319.844}{39.505234}
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](8.92,0.14)(8.92,-0.58)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](13.12,0.12)(13.12,-0.6)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](17.3,0.16)(17.3,-0.56)
+\usefont{T1}{ptm}{m}{n}
+\rput(13.172344,3.5){\small $q_{t}^{(1)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(17.342344,3.5){\small $q_{t+1}^{(1)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.002344,3.5){\small $q_{t-1}^{(1)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.962344,1.38){\small $q_{t-1}^{(2)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.162343,1.38){\small $q_{t}^{(2)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(17.302344,1.38){\small $q_{t+1}^{(2)}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.922344,-1.7){\small $q_{t-1}^{(\mathcal{P})}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.152344,-1.66){\small $q_{t}^{(\mathcal{P})}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(17.282344,-1.66){\small $q_{t+1}^{(\mathcal{P})}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.933125,-3.42){\small $\omega_{t-1}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.073281,-3.42){\small $\omega_{t}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(17.153125,-3.42){\small $\omega_{t+1}$}
+\end{pspicture} 
+}
+
