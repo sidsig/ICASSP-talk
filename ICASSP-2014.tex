@@ -92,12 +92,14 @@
 \end{frame}
 
 \begin{frame}{Problem definition}
+  \begin{center}
+    \includegraphics[scale=0.4]{Figures/pipeline.pdf}
+  \end{center}
   \begin{itemize}
     \item Learn features for a genre classification task using data from the GTZAN dataset.
     \item Train a classifier on the learned features and evaluate system performance.
     \item Inspect if features are general by using the same features on the ISMIR2004 genre dataset. 
-  \end{itemize}
-  This area will contain a diagram of the general pipeline
+  \end{itemize}  
 \end{frame}
 
 \begin{frame}{Contributions Of The Paper}
@@ -127,8 +129,9 @@ Activation function: $f(x) = max(0,x)$
 \end{frame}
 
 \begin{frame}{Dropout}
-{\usebeamercolor[fg]{structure} Training}
-\includegraphics[scale=0.5]{Figures/dropout.eps}
+\begin{center}  
+  \includegraphics[scale=0.5]{Figures/dropout.eps}
+\end{center}
 {\usebeamercolor[fg]{structure} Forward Propagation}
 $$y^{l} = \frac{1}{1-p}W^{l}(r^{l-1} * y^{l-1} + b^{l})$$
 \end{frame}
