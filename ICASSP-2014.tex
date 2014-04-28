@@ -23,6 +23,7 @@
 \usepackage{epsf,multirow,textcomp}
 \usepackage{algorithm,algorithmic}
 \usepackage{epstopdf}
+%\usepackage{enumitem}
 
 
 \title[Feature Learning with Neural Nets]{\Large{Improved Music Feature Learning with Deep Neural Networks} }
@@ -34,7 +35,7 @@
 \date{}
 
 %Left logo
-\pgfdeclareimage[height=0.4cm]{c4dm}{Figures/c4dm.eps}
+\pgfdeclareimage[height=0.4cm]{c4dm}{Figures/cd4m.eps}
 \setbeamertemplate{sidebar left}{
    \vfill
    \rlap{\hskip0.1cm \href{http://www.elec.qmul.ac.uk/digitalmusic/index.html}{\pgfuseimage{c4dm}}}
@@ -51,9 +52,6 @@
 
 \begin{frame}
   \titlepage
-
-
-  
 \end{frame}
 
 
@@ -65,53 +63,85 @@
   \begin{itemize}
   \item Try to learn the most optimal features for a particular task and reduce dependency on hand-crafted features.
   \item {\usebeamercolor[fg]{structure} How can we learn features for a particular task?}:
-    \\Neural nets with several hidden layers (deep networks) provide a way to learn features for a particular task.  
+    \\Neural nets with several hidden layers (deep neural networks).  
   \item {\usebeamercolor[fg]{structure} Can we learn features for MIR tasks with neural nets?}: 
-    \\Lots of recent evidence suggests yes! 
-    \\Neural nets have been used to successfully learn features for genre classification (Hamel,Sander), Music Transcription, Emotion prediction, music prediction etc. 
-
+    \\Lots of recent evidence suggests yes!     
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Challenges}
-Optimisation
+
+\begin{frame}{Challenges with this approach?}
 %{\usebeamercolor[fg]{structure}Optimisation}
   \begin{itemize}
-    \item Training neural networks with several hidden layers is challenging. 
-    \item The optimisation problem is highly non-linear and the best we can do is hope to find a useful local minimum. 
-    \item Unsupervised pre-training helps optimisation by finding a good initial parameter set.
+    \item Optimising networks with several hidden layers is challenging. 
+    \item The error surface is highly non-linear w.r.t. parameters and the best we can do is hope to find a useful local minimum. 
     \item The number of hyper-parameters can be quite large if we include momentum, learning rate schedules etc.   
+    \item For large networks, Stochastic Gradient Descent (SGD) can take prohibitively long to find useful minima even with unsupervised pre-training. 
+    \item In several domains (including music/audio), it is quite important to understand/interpret the learnt features. Something that is not clear with deep neural nets. 
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Current State of the Art}
+\begin{frame}{Can we do better?}
   \begin{itemize}
     \item The use of neural networks for supervised learning has come full circle in some ways.
     \item Unsupervised pre-training is not considered to be necessary for finding good solutions. 
     \item Gradient based optimisers starting with random parameter initialisation provide good results. 
-    \item Rectified linear units, Dropout, Hessian Free optimisation, Nesterov's accelerated gradient have all been applied successfully to various problems. 
+    \item Rectified Linear Units (ReLUs), Dropout, Hessian Free (HF) optimisation, Nesterov's Accelerated Gradient have all been applied to problems in various domains.
+    \item The application of these new techniques to learning features for MIR tasks could provide improvements over existing methods.  
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Problem Definition}
-We evaluate our ideas on a genre classification problem. 
-Insert a figure of the genre-classification pipeline. 
-3 boxes, feature extraction, classification, pooling, something like that. 
-Maybe colour the feature extraction box. 
+\begin{frame}{Problem definition}
+  \begin{itemize}
+    \item Learn features for a genre classification task using data from the GTZAN dataset.
+    \item Train a classifier on the learned features and evaluate system performance.
+    \item Inspect if features are general by using the same features on the ISMIR2004 genre dataset. 
+  \end{itemize}
+  This area will contain a diagram of the general pipeline
+\end{frame}
+
+\begin{frame}{Contributions Of The Paper}
+{\usebeamercolor[fg]{structure} Whats different?}
+\begin{itemize}
+    \item Evaluate the use of ReLUs as hidden units.
+    \item Use Dropout for regularisation.
+    \item Use HF Optimisation for training sigmoid nets and compare. 
+  \end{itemize}
+{\usebeamercolor[fg]{structure} Hypothesis?}
+\begin{itemize}
+    \item ReLUs+Dropout eliminate the need for pre-training.
+    \item Performance(ReLU+Dropout+SGD) $>=$ Performance(sigmoid nets+SGD)
+    \item More efficient training of sigmoid nets with HF.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Feature Extraction}
+This slide is going to contain a pictorial representation of the feature extraction. 
 \end{frame}
 
 \begin{frame}{Rectified Linear Units}
-Maybe just pictures? One of the activation function, one of the gradients passing. maybe mention why the gradients flow better. 
-\includegraphics[scale=0.3]{Figures/ReLU-grads.eps}
 \includegraphics[scale=0.3]{Figures/ReLU-acts.eps}
+\includegraphics[scale=0.3]{Figures/ReLU-grads.eps}
+\\
+Activation function: $f(x) = max(0,x)$
 \end{frame}
 
 \begin{frame}{Dropout}
-It is a regularisation technique. Makes training more robust. 
-Its like training an ensemble of neural networks that share weights. Can also be interpreted as a way to prevent co-adaptation of feature detectors in each layer. 
-Has been used to achieve state of the art performance on many image classification tasks. 
-
+{\usebeamercolor[fg]{structure} Training}
+\includegraphics[scale=0.5]{Figures/dropout.eps}
+{\usebeamercolor[fg]{structure} Forward Propagation}
+$$y^{l} = \frac{1}{1-p}W^{l}(r^{l-1} * y^{l-1} + b^{l})$$
 \end{frame}
+
+\begin{frame}{Useful Properties of ReLUs}
+\begin{itemize}
+    \item No need for supervised pre-training.
+    \item Hard sparsity in hidden layers.
+    \item Gradients flow easily.
+    \item Error surface is less convoluted w.r.t parameters because of the form of the activation function.
+  \end{itemize}
+\end{frame}
+
 
 \end{document}
 
