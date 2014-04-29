@@ -23,8 +23,8 @@
 \usepackage{epsf,multirow,textcomp}
 \usepackage{algorithm,algorithmic}
 \usepackage{epstopdf}
-\usepackage{biblatex}
-\addbibresource{biblio.bib}
+%\usepackage{biblatex}
+%\addbibresource{biblio.bib}
 %\usepackage{enumitem}
 
 
@@ -37,7 +37,7 @@
 \date{}
 
 %Left logo
-\pgfdeclareimage[height=0.4cm]{c4dm}{Figures/cd4m.eps}
+\pgfdeclareimage[height=0.4cm]{c4dm}{Figures/c4dm.pdf}
 \setbeamertemplate{sidebar left}{
    \vfill
    \rlap{\hskip0.1cm \href{http://www.elec.qmul.ac.uk/digitalmusic/index.html}{\pgfuseimage{c4dm}}}
@@ -134,13 +134,13 @@
 \begin{frame}{Rectified Linear Units}
 \includegraphics[width = .45\linewidth]{Figures/ReLU-acts.eps}
 \includegraphics[width = .45\linewidth]{Figures/ReLU-grads.eps}
-\footfullcite{glorot2011deep}
-%Activation function: $f(x) = max(0,x)$
 $$ \sum_{i}^{N} \sigma(x-i+0.5) \approx \log(1+e^{x})$$
 \begin{center}
   NReLU: $ f(x) = max(0,x + \mathcal{N}(0,\sigma(x)))$\\
   ReLU: $f(x) = max(0,x) $
 \end{center}
+%\footnotetext[1]{Xavier Glorot, Antoine Bordes, and Yoshua Bengio. Deep sparse rectiﬁer networks. In Proceedings of the 14th International Conference on Artiﬁcial Intelligence and Statistics. JMLR W&CP Volume, volume 15, pages 315–323, 2011}
+\footnotetext[1]{Xavier Glorot, Antoine Bordes and Yoshua Bengio. Deep Sparse Rectifier Networks}
 \end{frame}
 
 \begin{frame}{Dropout}
