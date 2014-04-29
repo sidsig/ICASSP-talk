@@ -23,6 +23,8 @@
 \usepackage{epsf,multirow,textcomp}
 \usepackage{algorithm,algorithmic}
 \usepackage{epstopdf}
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
 %\usepackage{enumitem}
 
 
@@ -92,9 +94,12 @@
 \end{frame}
 
 \begin{frame}{Problem definition}
+\begin{figure}
   \begin{center}
     \includegraphics[scale=0.4]{Figures/pipeline.pdf}
   \end{center}
+\caption{Pipeline of the genre classification system}
+\end{figure}
   \begin{itemize}
     \item Learn features for a genre classification task using data from the GTZAN dataset.
     \item Train a classifier on the learned features and evaluate system performance.
@@ -118,20 +123,33 @@
 \end{frame}
 
 \begin{frame}{Feature Extraction}
-This slide is going to contain a pictorial representation of the feature extraction. 
+\begin{figure}
+\begin{center}  
+  \includegraphics[scale=0.4]{Figures/feats.eps}
+\end{center}
+\caption{Feature extraction pipeline}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Rectified Linear Units}
-\includegraphics[scale=0.3]{Figures/ReLU-acts.eps}
-\includegraphics[scale=0.3]{Figures/ReLU-grads.eps}
-\\
-Activation function: $f(x) = max(0,x)$
+\includegraphics[width = .45\linewidth]{Figures/ReLU-acts.eps}
+\includegraphics[width = .45\linewidth]{Figures/ReLU-grads.eps}
+\footfullcite{glorot2011deep}
+%Activation function: $f(x) = max(0,x)$
+$$ \sum_{i}^{N} \sigma(x-i+0.5) \approx \log(1+e^{x})$$
+\begin{center}
+  NReLU: $ f(x) = max(0,x + \mathcal{N}(0,\sigma(x)))$\\
+  ReLU: $f(x) = max(0,x) $
+\end{center}
 \end{frame}
 
 \begin{frame}{Dropout}
+\begin{figure}
 \begin{center}  
   \includegraphics[scale=0.5]{Figures/dropout.eps}
 \end{center}
+\caption{Dropout: Some of the hidden units are masked during training}
+\end{figure}
 {\usebeamercolor[fg]{structure} Forward Propagation}
 $$y^{l} = \frac{1}{1-p}W^{l}(r^{l-1} * y^{l-1} + b^{l})$$
 \end{frame}
@@ -145,7 +163,99 @@ $$y^{l} = \frac{1}{1-p}W^{l}(r^{l-1} * y^{l-1} + b^{l})$$
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Hessian Free Optimisation}
+Newton's method: $ f(\theta_{n} + p) \approx f(\theta_{n}) + \nabla f(\theta_{n})^{T}p + \frac{1}{2}p^{T}Hp$\\
+Newton's update: $\theta_{n+1} = \theta_{n} - H^{-1}\nabla f(p_{n})$\\
+Quasi-newton use an approximation to the Hessian matrix $H$\\
+Two main insights in HF:
+\begin{itemize}
+    \item The products $Hp$ can be easily calculated using finite derivatives. 
+    \item The linear CG algorithm can be used to optimise the quadratic objective at each step. 
+  \end{itemize}
+\end{frame}
 
+\begin{frame}{Datasets}
+
+Tzanetakis Dataset:
+\begin{itemize}
+    \item 1000 examples, 30 seconds each, 22050 Hz.
+    \item 10 genres. 
+    \item 4, 50/25/25 train/valid/test splits. 
+    \item Features aggregated over 5 seconds with a 2.5s overlap. 
+  \end{itemize}
+ISMIR 2004 Genre Dataset:
+\begin{itemize}
+    \item 1458 examples, truncated to 30 seconds each, downsampled to 22050 Hz.
+    \item 6 genres. 
+    \item Original test/train split. 
+    \item Features aggregated over 5 seconds with a 2.5s overlap. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Tzanetakis Dataset}
+ \begin{table} 
+  \begin{center}
+  \scalebox{0.8}{
+  \begin{tabular}{ c | c | c | c | c}
+    \hline
+    &Hidden Units & ReLU+SGD & ReLU+SGD+Dropout &Sigmoid + HF\\ \hline
+    &Layer 1 &75.0$\pm$1.7 & 76.5$\pm$1.5 &78.5$\pm$2.1\\ 
+    50&Layer 2 & 79.6$\pm$2.7& 77.0$\pm$2.2 &80.0$\pm$2.6\\ 
+    &Layer 3 &81.3$\pm$1.8& 78.0$\pm$1.0 &80.8$\pm$1.1\\ 
+    &All &81.5$\pm$1.9& 81.5$\pm$1.7 &\textbf{82.1$\pm$1.7}\\ \hline
+    &Layer 1 &71.8$\pm$0.7& 75.5$\pm$1.1 &67.8$\pm$1.5\\ 
+    &Layer 2&79.5$\pm$1.9& 82.5$\pm$1.8 &74.0$\pm$2.6\\ 
+    500&Layer 3&83.0$\pm$1.2& 82.0$\pm$1.4 &77.1$\pm$2.36\\ 
+    &All&82.5$\pm$2.3 & \textbf{83.0$\pm$1.1}  &76.0$\pm$1.0\\ \hline
+    \hline
+  \end{tabular}}
+  \end{center}
+\caption{Genre classification results on the Tzanetakis dataset}
+\end{table}  
+\end{frame}
+
+\begin{frame}{Results: ISMIR 2004 Dataset}
+\begin{center}
+\begin{table}
+\scalebox{0.75}{
+  \begin{tabular}{c| c | c | c | c}
+    \hline
+    Hidden Units & Layer & ReLU+SGD & ReLU+SGD+Dropout &Sigmoid + HF\\ \hline
+    &1 & 70.50 & 68.03 &68.72\\ 
+    50&2 & 70.80 & 66.94 &70.23\\ 
+    &3 & 69.13& 68.03 &70.50\\ 
+    &All & 72.42 & 69.68 &71.20\\ \hline
+    &1 & 68.03 & 70.09 &68.40\\ 
+    500&2 & 71.33 & 72.01 &68.32\\ 
+    &3 & 71.46 & 69.41 &70.37\\ 
+    &All & 72.30& \textbf{73.46} &70.23\\ \hline
+    \hline
+  \end{tabular}}
+\caption{Genre classification results on the ISMIR 2004 dataset}
+\vspace{-0.8em}
+\end{table}  
+\end{center}
+\end{frame}
+
+\begin{frame}{Observations}
+\begin{itemize}
+    \item Best accuracy is achieved with large hidden layers, ReLUs and Dropout.
+    \item Classification accuracy is comparable to current state of the art with hand-crafted features. 
+    \item Dropout does not work well for network with small number of hidden units. 
+    \item HF achieves comparable results, though the ReLU performs better with large hidden layers. 
+    \item The same features when used for the ISMIR dataset outperform MFCCs and PMSC features. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions}
+\begin{itemize}
+    \item ReLUs + SGD + Dropout learn good features are as effective as the state-of-the-art hand-crafted features.
+    \item ReLU network learn good solutions without any pre-training. 
+    \item HF is another attractive method for training neural nets. 
+    \item The features learnt are general and can be reused for other tasks. 
+\end{itemize}
+\footnotetext[1]{Code:http://www.eecs.qmul.ac.uk/\~sss31/}
+\end{frame}
 \end{document}
 
 
